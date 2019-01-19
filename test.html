@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<canvas id="myChart"></canvas>
+	</div>
+	<script>
+		let myChart = document.getElementById('myChart').getContext('2d');
+		Chart.defaults.global.defaultFontFamily = 'Lato';
+		Chart.defaults.global.defaultFontSize = 18;
+		Chart.defaults.global.defaultFontColor = '#777';
+		let timesChart = new Chart(myChart,{
+			type:bar,
+			data:{
+				labels:['lbl1','lbl2','lbl3','lbl4','lbl5'],
+				datasets:[{
+					label:'first dataset',
+					data:[
+						100,
+						200,
+						300,
+						150,
+						275
+					]
+				}]
+			},
+			options:{}
+		})
+	</script>
+</body>
+</html>
